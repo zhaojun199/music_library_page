@@ -1,0 +1,39 @@
+@import "common"
+@import "cover-element"
+@import "../css/reset.css"
+
+#app 
+	font-family: 'Avenir', Helvetica, Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	color: #2c3e50
+
+a
+	color: #000
+	&:link
+		text-decoration: none
+	&:visited
+		text-decoration: none
+
+.list-img 
+	height: 30px
+	width: 30px
+	margin-top: 5px
+	cursor: pointer
+	border-radius: 3px
+
+.search
+	float:right
+	margin: -20px 5px 5px
+	.search-input
+		border-radius: 4px
+		border: 1px solid #bfcbd9
+		color: #1f2d3d
+		transition: border-color .2s cubic-bezier(.645,.045,.355,1)
+		height: 24px
+		padding: 0 5px
+		outline: none
+
+.no-input
+	height: 36px
+	line-height: @height

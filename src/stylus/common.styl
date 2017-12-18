@@ -1,0 +1,72 @@
+//zhaojun's common css
+colorTranslucence = rgba(7, 17, 27, 0.8)	//半透明
+colorGrey = #dcdcdc		//灰色
+
+//DPI适配
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+	.cm-1pxborder-bottom
+		-webkit-transform: scaleY(0.7)
+		transform: scaleY(0.7)
+		
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+	.cm-1pxborder-bottom
+		-webkit-transform: scaleY(0.5)
+		transform: scaleY(0.5)
+		
+//清除浮动（用于撑开父元素）
+.cm-clearfix
+	display: inline-block
+	&:after
+		display: block
+		content: "."
+		height: 0
+		line-height: 0
+		clear: both
+		visibility: hidden
+
+//1px像素
+.cm-1pxborder-bottom
+	position: relative
+	&:after
+		display: block
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		border-top: 1px solid colorGrey
+		content: ' '
+		
+.cm-1pxborder-none
+	&:after
+		display:none
+		
+//css sticky footers布局
+/**
+<div class="cm-sfs-contain">
+	<div class="cm-sfs-wraper cm-clearfix">
+		<div class="cm-sfs-main"></div>
+	</div>
+	<div class="cm-sfs-foot"></div>
+</div>
+**/
+.cm-sfs-contain
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background: colorTranslucence
+	.cm-sfs-wraper
+		min-height: 100%
+		width: 100%
+		.cm-sfs-main
+			padding-bottom: 64px
+	.cm-sfs-foot
+		position: relative
+		width: 32px
+		height: @width
+		margin: -(@width * 2) auto 0 auto
+		clear: both
+		background: colorGrey

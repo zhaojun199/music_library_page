@@ -1,0 +1,117 @@
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .cm-1pxborder-bottom {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .cm-1pxborder-bottom {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+.cm-clearfix {
+  display: inline-block;
+}
+.cm-clearfix:after {
+  display: block;
+  content: ".";
+  height: 0;
+  line-height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cm-1pxborder-bottom {
+  position: relative;
+}
+.cm-1pxborder-bottom:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #dcdcdc;
+  content: ' ';
+}
+.cm-1pxborder-none:after {
+  display: none;
+}
+.cm-sfs-contain {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(7,17,27,0.8);
+}
+.cm-sfs-contain .cm-sfs-wraper {
+  min-height: 100%;
+  width: 100%;
+}
+.cm-sfs-contain .cm-sfs-wraper .cm-sfs-main {
+  padding-bottom: 64px;
+}
+.cm-sfs-contain .cm-sfs-foot {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: -64px auto 0 auto;
+  clear: both;
+  background: #dcdcdc;
+}
+.el-breadcrumb.breadcrumb {
+  margin: 5px;
+}
+.el-menu--horizontal .el-menu-item {
+  height: 40px;
+  line-height: 40px;
+}
+.el-menu--horizontal .el-submenu .el-submenu__title {
+  height: 40px;
+  line-height: 40px;
+}
+.el-menu--horizontal .el-submenu >.el-menu {
+  top: 40px;
+}
+@import "../css/reset.css";
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+a {
+  color: #000;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+.list-img {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.search {
+  float: right;
+  margin: -20px 5px 5px;
+}
+.search .search-input {
+  border-radius: 4px;
+  border: 1px solid #bfcbd9;
+  color: #1f2d3d;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 24px;
+  padding: 0 5px;
+  outline: none;
+}
+.no-input {
+  height: 36px;
+  line-height: 36px;
+}
